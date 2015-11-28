@@ -1,0 +1,34 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by 刘雨轩 on 15/11/6.
+//  Copyright © 2015年 刘雨轩. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+YXBarButtonItem.h"
+#import "UITextField+YXExtension.h"
+#import <SVProgressHUD.h>
+#import "YXConst.h"
+#import "YXRefreshFooter.h"
+#import "YXRefreshHeader.h"
+#ifdef DEBUG
+
+#define YXLog(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define YXLog(...)
+#endif
+
+#define YXLogFun YXLog(@"%s",__func__);
+#define YXGrayColor [UIColor colorWithRed:206/255.0 green:206/255.0 blue:206/255.0 alpha:1]
+#endif
+
+#endif 
